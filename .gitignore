@@ -1,0 +1,21 @@
+# Python 缓存
+__pycache__/
+*.pyc
+
+# 虚拟环境文件夹（名字按你实际命名）
+venv/
+ai/
+
+# 环境变量
+.env
+
+# macOS 系统文件
+.DS_Store
+
+# VSCode 等 IDE 设置
+.vscode/
+.idea/
+
+# 日志和数据库文件（视情况）
+*.log
+*.sqlite3

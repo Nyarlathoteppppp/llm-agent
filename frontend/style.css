@@ -1,0 +1,61 @@
+/* 级联变量：亮深两套颜色 */
+:root{
+  --bg:#f9fafb;--card:#ffffff;--text:#111827;
+  --border:#e5e7eb;--btn:#2563eb;--btn-hover:#1d4ed8;
+  --error:#dc2626;--code-bg:#f1f5f9;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0f172a;--card:#1e293b;--text:#f4f4f5;
+    --border:#334155;--btn:#3b82f6;--btn-hover:#60a5fa;
+    --error:#f87171;--code-bg:#1e293b;
+  }
+}
+
+/* 基本布局 */
+*{box-sizing:border-box;font-family:Inter,Arial,sans-serif;margin:0}
+body{background:var(--bg);color:var(--text);padding:40px 16px}
+.container{max-width:760px;margin:auto}
+h1{font-size:28px;font-weight:600;margin-bottom:16px}
+.arrow{font-size:22px}
+
+/* 输入框 */
+textarea{
+  width:100%;padding:12px 14px;font-size:15px;
+  border:1px solid var(--border);border-radius:8px;
+  resize:vertical;min-height:90px;background:var(--card);color:var(--text);
+}
+
+/* 按钮行 */
+.btn-row{display:flex;align-items:center;margin-top:14px;gap:12px}
+button{
+  background:var(--btn);color:#fff;border:none;padding:8px 22px;
+  border-radius:8px;font-size:15px;cursor:pointer;transition:.2s
+}
+button:hover:not(:disabled){background:var(--btn-hover)}
+button:disabled{opacity:.55;cursor:not-allowed}
+.status{font-size:14px}
+
+/* 结果卡片 */
+.card{
+  margin-top:24px;padding:18px;border:1px solid var(--border);
+  border-radius:10px;background:var(--card)
+}
+.card h3{font-size:18px;margin-bottom:6px}
+
+/* SQL 代码块 */
+.code{
+  background:var(--code-bg);padding:8px;border-radius:6px;
+  overflow-x:auto
+}
+
+/* 表格滚动 */
+.table-wrapper{overflow-x:auto;font-size:14px}
+
+/* 隐藏面板 */
+.hidden{display:none}
+
+/* 错误提示 */
+.error{color:var(--error)}
+.loading{opacity:.35;animation:blink 1s infinite}
+@keyframes blink{0%,100%{opacity:.35}50%{opacity:1}}
